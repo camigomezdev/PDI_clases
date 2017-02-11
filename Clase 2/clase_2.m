@@ -1,5 +1,6 @@
 %Información de la camara imaqhwinfo('winvideo', 1)
 clear all, close all, clc
+%Lectura de la camara
 a=videoinput('winvideo',1,'MJPG_1280x720');
 %preview(a)
 b = getsnapshot(a); b=imresize(b, 0.5);

@@ -1,3 +1,4 @@
+%Limpiar
 clear all, close all, clc
 %Negativo
 a = imread('paisaje1.jpg');
@@ -17,15 +18,25 @@ b=imread('paisaje2.jpg');
 [fil,col,cap]=size(a);
 b=imresize(b,[fil,col]);
 
+v = VideoWriter('tarea_video.avi');
+open(v);
+
 for i = 0:0.005:1
     c=a*(i)+b*(1-i);
-    figure(2);imshow(c);title(['porcentaje = ', num2str(i*100)]);
+    figure(2);
+    imshow(c);
+    title(['porcentaje = ', num2str(i*100)]);
+    writeVideo(v,c);
     pause(0.01);
 end
 for i = 0:0.005:1
     c=b*(i)+a*(1-i);
-    figure(2);imshow(c);title(['porcentaje = ', num2str(i*100)]);
+    figure(2);
+    imshow(c);
+    title(['porcentaje = ', num2str(i*100)]);
+    writeVideo(v,c);
     pause(0.01);
 end
+close(v);
 
 

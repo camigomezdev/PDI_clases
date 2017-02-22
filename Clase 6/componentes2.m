@@ -1,4 +1,4 @@
-function b = componentes(a)
+function [bn, s, y, b, c]  = componentes2(a)
     [fil,col,cap] = size(a);
     if cap ==1 
         b=a; 
@@ -22,8 +22,16 @@ function b = componentes(a)
     %LCH
     cform = makecform('lab2lch');
     lch = applycform(lab,cform);
-    lch = normaliza(lab);
+    lch = normaliza(lch);
     
-    b = [rgb; hsi; cmy; lab];
-end
+    %b = [rgb, hsi; cmy, k; lab2, lch];
+    
+    bn = rgb(:,(col*2+1):col*3);
+    bn=255-bn;
+    s = hsi(:,(col+1):col*2);
+    y = cmy(:, (col*2+1):col*3);
+    b = lab2(:,(col*2+1):col*3);
+    c = lch(:,(col+1):col*2);
+    
 
+end

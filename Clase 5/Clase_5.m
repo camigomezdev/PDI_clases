@@ -24,10 +24,11 @@ min1(min1>0)=255;
 
 figure(4);imshow(min1);impixelinfo
 
+
 min1 = [min1,min1,min1];
 min1 = reshape(min1,[fil,col,cap]);
 a(min1 == 0 ) = 0;
-%%
-figure(5);imshow(a);impixelinfo
 
+figure(5);imshow(a);impixelinfo
+imwrite(a, 'placa_3.bmp');
 

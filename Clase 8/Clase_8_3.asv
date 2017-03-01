@@ -10,8 +10,7 @@ EE = strel('square',3);
 b=a;
 figure(1);imshow(a);
 
-%imopen() -> Erode -> dilate
-%imclose() -> Dilate -> Erode
+%imclose
 
 for i = 1:3
     b = imerode(b,EE);

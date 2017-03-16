@@ -26,12 +26,14 @@ cform = makecform('srgb2lab');
 a3 = applycform(a, cform);
 a3 = double(a3); 
 a3 = a3/max(a3(:))*255;
+a4 = uint8(a3);
+figure(99);imshow([a3,a4]);impixelinfo;
 a3 = uint8(a3);
 
 b = a3(:,:,3);
 
 a3 = reshape(a3, [fil, col*cap]);
-imshow([a1; a2; a3]);
+figure;imshow([a1; a2; a3]);
 title('R-G-B:H-S-I:L-A-B');
 impixelinfo
 

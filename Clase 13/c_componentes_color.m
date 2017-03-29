@@ -71,12 +71,14 @@ function c=c_componentes_color(a);
      b=a1(:,(col*2+1):col*3);
      y=a6(:,(col*2+1):col*3);
      s=a8(:,(col+1):col*2);
-%    bb=a9(:,(col*2+1):col*3); bb=255-bb;
-%    figure(1); imshow([b,y;s,bb]); 
-%    title(['b-y s-bb']); impixelinfo
+    %bb=a9(:,(col*2+1):col*3); bb=255-bb;
+    %figure(1); imshow([b,y;s,bb]); 
+    %title(['b-y s-bb']); impixelinfo
     c=max(b,y);c=max(c,s);
     c=reshape([c,c,c],[fil,col,cap]);  % devuelve el máximo
 %     figure(1); imshow(c); impixelinfo
 %     pause;  
 %     close all
     
+
+end

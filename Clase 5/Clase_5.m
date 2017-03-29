@@ -15,7 +15,7 @@ figure(3); imshow(b); impixelinfo
 c = componentes(a1);
 figure(4); imshow(c); impixelinfo
 
-a2 = imread('imagen_3.jpg'); 
+%a2 = imread('imagen_3.jpg'); 
 a2 = imresize(a2,[fil,col]);
 d = componentes(a2);
 figure(5); imshow(d); impixelinfo

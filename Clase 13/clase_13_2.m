@@ -12,11 +12,11 @@ for i=1:198
     %figure(1);imshow(d);
     level = graythresh(d);
     BW = im2bw(d,level);
-    figure(2), imshow(BW);
+    %figure(2), imshow(BW);
     e = objeto_mayor(BW);
     %figure(3);imshow(e);pause;
     a(e==0)=0;
-    figure(1);imshow(a);pause;
+    figure(1);imshow(a);pause(0.1);
 end
 
     

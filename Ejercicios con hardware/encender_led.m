@@ -1,5 +1,7 @@
 clear all, close all, clc
-%arduino
+%Instalar plugin de arduino
+%Verificar en que puerto esta conectado
+%Conectamos el arduino 
 a = arduino('COM3', 'Uno');
 ledPin ='D13';
 writeDigitalPin(a, ledPin, 0);

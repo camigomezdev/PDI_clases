@@ -12,3 +12,5 @@ Los temas abordados a lo largo del curso son: :books:
 * Extracción de Características: RegionProps
 * Clasificaciones Lineales: Correlación
 * Clasificación heurística: Uso de Redes neuronales
+
+Versión de MATLAB: R2016a

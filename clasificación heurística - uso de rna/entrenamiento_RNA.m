@@ -7,6 +7,10 @@
 %   irisInputs - input data.
 %   irisTargets - target data.
 
+% Esta clase es el entrenamiento de la red neuronal artificial por medio del
+% asistente que brinda Matlab, se cargan los datos de la base de datos de pruebas IRIS
+% y se entrena una rna para la clasificación de muestras correspondientes
+
 x = irisInputs;
 t = irisTargets;
 
